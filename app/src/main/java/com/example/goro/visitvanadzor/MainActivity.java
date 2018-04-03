@@ -11,71 +11,92 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import shivam.developer.featuredrecyclerview.FeatureLinearLayoutManager;
+import shivam.developer.featuredrecyclerview.FeaturedRecyclerView;
+
 public class MainActivity extends AppCompatActivity {
 
-    private List<Person> persons;
-    private RecyclerView rv;
+//    private List<Person> persons;
+//    private RecyclerView rv;
+
+    List<String> dummyData = new ArrayList<>();
+    FeaturedRecyclerView featuredRecyclerView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        rv=(RecyclerView)findViewById(R.id.rv);
-
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        rv.setLayoutManager(llm);
-        rv.setHasFixedSize(true);
-
-        initializeData();
-        initializeAdapter();
-
-        rv.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-
-
-            }
-
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-            }
-
-
-        });
+//        rv=(RecyclerView)findViewById(R.id.rv);
+//
+//        LinearLayoutManager llm = new LinearLayoutManager(this);
+//        rv.setLayoutManager(llm);
+//        rv.setHasFixedSize(true);
+//
+//        initializeData();
+//        initializeAdapter();
+//
+//        rv.addOnScrollListener(new RecyclerView.OnScrollListener() {
+//            @Override
+//            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+//                super.onScrolled(recyclerView, dx, dy);
+//
+//
+//            }
+//
+//            @Override
+//            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+//                super.onScrollStateChanged(recyclerView, newState);
+//            }
+//
+//
+//        });
+        createDummyDataList();
+        featuredRecyclerView = (FeaturedRecyclerView) findViewById(R.id.rv);
+        FeatureLinearLayoutManager layoutManager = new FeatureLinearLayoutManager(this);
+        featuredRecyclerView.setLayoutManager(layoutManager);
+        CustomRecyclerViewAdapter adapter = new CustomRecyclerViewAdapter(this, dummyData);
+        featuredRecyclerView.setAdapter(adapter);
     }
 
-
-
-    private void initializeData(){
-        persons = new ArrayList<>();
-        persons.add(new Person("Ամենօրյա", "23 years old", R.drawable.amenorya));
-        persons.add(new Person("Քաղաքը անձրևին", "25 years old", R.drawable.andzrevayin));
-        persons.add(new Person("Արցախ պուրակ", "35 years old", R.drawable.arcakh));
-        persons.add(new Person("Ձմեռ", "35 years old", R.drawable.dzmerayin));
-        persons.add(new Person("Վանաձորի 7 հրաշալիքները", "35 years old", R.drawable.hamajnapatker));
-        persons.add(new Person("Լճեր", "35 years old", R.drawable.ljer_mets));
-        persons.add(new Person("Վարպետ Մեհրաբ", "35 years old", R.drawable.mehrab_aghbyur));
-        persons.add(new Person("Նավակ", "35 years old", R.drawable.ljer_navak));
-        persons.add(new Person("Լուսաբաց", "35 years old", R.drawable.mtnshagh));
-        persons.add(new Person("Հանգիստ", "35 years old", R.drawable.ljer_taghavar));
-        persons.add(new Person("Արվեստ", "35 years old", R.drawable.patkerasrah));
-        persons.add(new Person("Ղարաքիլիսա", "35 years old", R.drawable.sb_sargis));
-        persons.add(new Person("Թռչնի թռիչք", "35 years old", R.drawable.verevic));
-        persons.add(new Person("Գրականություն", "35 years old", R.drawable.zoryan));
-    }
-
-    private void initializeAdapter(){
-        RVAdapter adapter = new RVAdapter(persons, new CustomItemClickListener() {
-            @Override
-            public void onItemClick(View v, int position) {
-                Toast.makeText(MainActivity.this, "Clicked Item: "+position,Toast.LENGTH_SHORT).show();
-            }
-        });
-        rv.setAdapter(adapter);
+    private void createDummyDataList() {
+        for (int i = 1; i <= 20; i++) {
+            dummyData.add("Item " + i);
+        }
     }
 
 
 }
+
+
+//    private void initializeData(){
+//        persons = new ArrayList<>();
+//        persons.add(new Person("Ամենօրյա", "23 years old", R.drawable.amenorya));
+//        persons.add(new Person("Քաղաքը անձրևին", "25 years old", R.drawable.andzrevayin));
+//        persons.add(new Person("Արցախ պուրակ", "35 years old", R.drawable.arcakh));
+//        persons.add(new Person("Ձմեռ", "35 years old", R.drawable.dzmerayin));
+//        persons.add(new Person("Վանաձորի 7 հրաշալիքները", "35 years old", R.drawable.hamajnapatker));
+//        persons.add(new Person("Լճեր", "35 years old", R.drawable.ljer_mets));
+//        persons.add(new Person("Վարպետ Մեհրաբ", "35 years old", R.drawable.mehrab_aghbyur));
+//        persons.add(new Person("Նավակ", "35 years old", R.drawable.ljer_navak));
+//        persons.add(new Person("Լուսաբաց", "35 years old", R.drawable.mtnshagh));
+//        persons.add(new Person("Հանգիստ", "35 years old", R.drawable.ljer_taghavar));
+//        persons.add(new Person("Արվեստ", "35 years old", R.drawable.patkerasrah));
+//        persons.add(new Person("Ղարաքիլիսա", "35 years old", R.drawable.sb_sargis));
+//        persons.add(new Person("Թռչնի թռիչք", "35 years old", R.drawable.verevic));
+//        persons.add(new Person("Գրականություն", "35 years old", R.drawable.zoryan));
+//    }
+//
+//    private void initializeAdapter(){
+//        RVAdapter adapter = new RVAdapter(persons, new CustomItemClickListener() {
+//            @Override
+//            public void onItemClick(View v, int position) {
+//                Toast.makeText(MainActivity.this, "Clicked Item: "+position,Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        rv.setAdapter(adapter);
+//    }
+
+
+
+

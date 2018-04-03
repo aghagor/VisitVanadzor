@@ -7,10 +7,10 @@
     tools:context="com.example.goro.visitvanadzor.MainActivity">
 
     <!--<android.support.v7.widget.RecyclerView-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:id="@+id/rv"-->
-        <!--&gt;-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:id="@+id/rv"-->
+    <!--&gt;-->
 
     <!--</android.support.v7.widget.RecyclerView>-->
 
@@ -18,8 +18,8 @@
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:featuredItemHeight="400dp"
-        android:defaultItemHeight="200dp">
+        app:defaultItemHeight="120dp"
+        app:featuredItemHeight="300dp">
 
     </shivam.developer.featuredrecyclerview.FeaturedRecyclerView>
 </LinearLayout>
