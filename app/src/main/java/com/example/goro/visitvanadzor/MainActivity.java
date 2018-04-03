@@ -29,7 +29,25 @@ public class MainActivity extends AppCompatActivity {
 
         initializeData();
         initializeAdapter();
+
+        rv.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+
+
+            }
+
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+
+        });
     }
+
+
 
     private void initializeData(){
         persons = new ArrayList<>();

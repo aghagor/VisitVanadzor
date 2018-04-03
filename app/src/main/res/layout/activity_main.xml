@@ -6,12 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.example.goro.visitvanadzor.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:id="@+id/rv"-->
+        <!--&gt;-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+    <shivam.developer.featuredrecyclerview.FeaturedRecyclerView
         android:id="@+id/rv"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:featuredItemHeight="400dp"
+        android:defaultItemHeight="200dp">
 
-    </android.support.v7.widget.RecyclerView>
-
+    </shivam.developer.featuredrecyclerview.FeaturedRecyclerView>
 </LinearLayout>
