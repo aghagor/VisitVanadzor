@@ -16,21 +16,17 @@ import shivam.developer.featuredrecyclerview.FeatureRecyclerViewAdapter;
 
 public class CustomRecyclerViewAdapter extends FeatureRecyclerViewAdapter<CustomRecyclerViewAdapter.CustomRecyclerViewHolder> {
 
-    private List<String> dataList;
+    CustomItemClickListener listener;
+    private List<Manifacture> dataList;
     private Context context;
-    private int[] images = new int[5];
+//    private int[] images = new int[7];
 
-    public CustomRecyclerViewAdapter(Context context, List<String> list) {
+    public CustomRecyclerViewAdapter(Context context, List<Manifacture> list, CustomItemClickListener listener) {
         this.dataList = list;
         this.context = context;
-
-        images[0] = R.drawable.amenorya;
-        images[1] = R.drawable.andzrevayin;
-        images[2] = R.drawable.arcakh;
-        images[3] = R.drawable.dzmerayin;
-        images[4] = R.drawable.ljer_navak;
-
+        this.listener = listener;
     }
+
 
     @Override
     public CustomRecyclerViewHolder onCreateFeaturedViewHolder(ViewGroup parent, int viewType) {
@@ -40,10 +36,16 @@ public class CustomRecyclerViewAdapter extends FeatureRecyclerViewAdapter<Custom
     }
 
     @Override
-    public void onBindFeaturedViewHolder(CustomRecyclerViewHolder holder, int position) {
+    public void onBindFeaturedViewHolder(CustomRecyclerViewHolder holder, final int position) {
         Picasso.with(context)
-                .load(images[position % 4]).into(holder.ivBackground);
-        holder.tvHeading.setText(dataList.get(position));
+                .load(dataList.get(position).getImg()).into(holder.ivBackground);
+        holder.tvHeading.setText(dataList.get(position).getTitle());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onItemClick(dataList.get(position));
+            }
+        });
     }
 
     @Override
@@ -53,7 +55,7 @@ public class CustomRecyclerViewAdapter extends FeatureRecyclerViewAdapter<Custom
 
     @Override
     public void onSmallItemResize(CustomRecyclerViewHolder holder, int position, float offset) {
-        holder.tvHeading.setAlpha(offset / 100f);
+        holder.tvHeading.setAlpha(offset / 0f);
     }
 
     @Override
@@ -69,8 +71,8 @@ public class CustomRecyclerViewAdapter extends FeatureRecyclerViewAdapter<Custom
         public CustomRecyclerViewHolder(View itemView) {
             super(itemView);
 
-            ivBackground = (ImageView) itemView.findViewById(R.id.person_photo);
-            tvHeading = (TextView) itemView.findViewById(R.id.person_name);
+            ivBackground = (ImageView) itemView.findViewById(R.id.iv_background);
+            tvHeading = (TextView) itemView.findViewById(R.id.tv_heading);
         }
     }
 }

@@ -1,11 +1,7 @@
 package com.example.goro.visitvanadzor;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.MotionEvent;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,86 +12,65 @@ import shivam.developer.featuredrecyclerview.FeaturedRecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
-//    private List<Person> persons;
-//    private RecyclerView rv;
 
-    List<String> dummyData = new ArrayList<>();
+    List<Manifacture> dummyData = new ArrayList<>();
     FeaturedRecyclerView featuredRecyclerView;
+    private CustomRecyclerViewAdapter adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        rv=(RecyclerView)findViewById(R.id.rv);
-//
-//        LinearLayoutManager llm = new LinearLayoutManager(this);
-//        rv.setLayoutManager(llm);
-//        rv.setHasFixedSize(true);
-//
-//        initializeData();
-//        initializeAdapter();
-//
-//        rv.addOnScrollListener(new RecyclerView.OnScrollListener() {
-//            @Override
-//            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-//                super.onScrolled(recyclerView, dx, dy);
-//
-//
-//            }
-//
-//            @Override
-//            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-//                super.onScrollStateChanged(recyclerView, newState);
-//            }
-//
-//
-//        });
-        createDummyDataList();
+
         featuredRecyclerView = (FeaturedRecyclerView) findViewById(R.id.rv);
+
         FeatureLinearLayoutManager layoutManager = new FeatureLinearLayoutManager(this);
         featuredRecyclerView.setLayoutManager(layoutManager);
-        CustomRecyclerViewAdapter adapter = new CustomRecyclerViewAdapter(this, dummyData);
+        createDummyDataList();
+        adapter = new CustomRecyclerViewAdapter(this, dummyData, new CustomItemClickListener() {
+            @Override
+            public void onItemClick(Manifacture obj) {
+                Toast.makeText(MainActivity.this, obj.getTitle(), Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.root_layout, DitaileFragmentForManifacturies
+                        .newInstanceForDitaileFragmentForManifacuries(MainActivity.this, obj)).addToBackStack(null)
+                        .commit();
+
+            }
+        });
         featuredRecyclerView.setAdapter(adapter);
+
     }
 
     private void createDummyDataList() {
-        for (int i = 1; i <= 20; i++) {
-            dummyData.add("Item " + i);
-        }
-    }
+        Manifacture manifacture1 = new Manifacture("Վանաձորի 7 հրաշալիքները", R.drawable.sb_sargis,
+                78.1, 75.2, "desc");
+        Manifacture manifacture2 = new Manifacture("Վարպետաց դասեր", R.drawable.mehrab_aghbyur,
+                88.1, 73.2, "desc2");
+        Manifacture manifacture3 = new Manifacture("Մշակութային կենտրոններ", R.drawable.patkerasrah,
+                68.1, 23.2, "desc3");
+        Manifacture manifacture4 = new Manifacture("Արձաններ", R.drawable.arcakh,
+                1268.1, 3223.2, "desc4");
+        Manifacture manifacture5 = new Manifacture("Տեսարժան վայրեր", R.drawable.ljer_navak,
+                123268.1, 32223.2, "desc5");
+        Manifacture manifacture6 = new Manifacture("Հուշարձաններ", R.drawable.zoryan,
+                1232.1, 3222.2, "desc6");
+        Manifacture manifacture7 = new Manifacture("Պատմական", R.drawable.zoryan,
+                6481232.1, 15483222.2, "desc7");
 
+        dummyData.add(manifacture1);
+        dummyData.add(manifacture2);
+        dummyData.add(manifacture3);
+        dummyData.add(manifacture4);
+        dummyData.add(manifacture5);
+        dummyData.add(manifacture6);
+        dummyData.add(manifacture7);
+
+    }
 
 }
 
 
-//    private void initializeData(){
-//        persons = new ArrayList<>();
-//        persons.add(new Person("Ամենօրյա", "23 years old", R.drawable.amenorya));
-//        persons.add(new Person("Քաղաքը անձրևին", "25 years old", R.drawable.andzrevayin));
-//        persons.add(new Person("Արցախ պուրակ", "35 years old", R.drawable.arcakh));
-//        persons.add(new Person("Ձմեռ", "35 years old", R.drawable.dzmerayin));
-//        persons.add(new Person("Վանաձորի 7 հրաշալիքները", "35 years old", R.drawable.hamajnapatker));
-//        persons.add(new Person("Լճեր", "35 years old", R.drawable.ljer_mets));
-//        persons.add(new Person("Վարպետ Մեհրաբ", "35 years old", R.drawable.mehrab_aghbyur));
-//        persons.add(new Person("Նավակ", "35 years old", R.drawable.ljer_navak));
-//        persons.add(new Person("Լուսաբաց", "35 years old", R.drawable.mtnshagh));
-//        persons.add(new Person("Հանգիստ", "35 years old", R.drawable.ljer_taghavar));
-//        persons.add(new Person("Արվեստ", "35 years old", R.drawable.patkerasrah));
-//        persons.add(new Person("Ղարաքիլիսա", "35 years old", R.drawable.sb_sargis));
-//        persons.add(new Person("Թռչնի թռիչք", "35 years old", R.drawable.verevic));
-//        persons.add(new Person("Գրականություն", "35 years old", R.drawable.zoryan));
-//    }
-//
-//    private void initializeAdapter(){
-//        RVAdapter adapter = new RVAdapter(persons, new CustomItemClickListener() {
-//            @Override
-//            public void onItemClick(View v, int position) {
-//                Toast.makeText(MainActivity.this, "Clicked Item: "+position,Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//        rv.setAdapter(adapter);
-//    }
 
 
 

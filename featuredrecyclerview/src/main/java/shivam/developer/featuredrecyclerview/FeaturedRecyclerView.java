@@ -144,4 +144,6 @@ public class FeaturedRecyclerView extends RecyclerView {
         }
         super.setAdapter(adapter);
     }
+
+
 }
