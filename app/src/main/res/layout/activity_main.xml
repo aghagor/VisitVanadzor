@@ -4,23 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/root_layout"
-    tools:context="com.example.goro.visitvanadzor.MainActivity">
+    tools:context="com.example.goro.visitvanadzor.activities.MainActivity">
 
-    <!--<android.support.v7.widget.RecyclerView-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:id="@+id/rv"-->
-    <!--&gt;-->
-
-    <!--</android.support.v7.widget.RecyclerView>-->
-
-    <shivam.developer.featuredrecyclerview.FeaturedRecyclerView
-        android:id="@+id/rv"
+    <RelativeLayout
+        android:id="@+id/root_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:defaultItemHeight="120dp"
-        app:featuredItemHeight="300dp">
+        android:layout_above="@id/linear_bottombar">
 
-    </shivam.developer.featuredrecyclerview.FeaturedRecyclerView>
+        <shivam.developer.featuredrecyclerview.FeaturedRecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultItemHeight="120dp"
+            app:featuredItemHeight="300dp">
+
+        </shivam.developer.featuredrecyclerview.FeaturedRecyclerView>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            android:foreground="?attr/selectableItemBackground"
+            app:itemBackground="@color/bgBottomNavigation"
+            app:itemIconTint="@android:color/white"
+            app:itemTextColor="@android:color/white"
+            app:menu="@menu/navigation">
+
+        </android.support.design.widget.BottomNavigationView>
+    </LinearLayout>
 </RelativeLayout>

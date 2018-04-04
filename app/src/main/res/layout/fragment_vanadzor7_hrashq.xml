@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.goro.visitvanadzor.fragments.Vanadzor7HrashqFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cover_img"
+                    android:layout_width="386dp"
+                    android:layout_height="300dp"
+                    android:src="@drawable/sargis_7" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/cover_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cover_text_7" />
+
+            <ImageView
+                android:id="@+id/samvel_img"
+                android:layout_width="386dp"
+                android:layout_height="300dp"
+                android:src="@drawable/samvel_7" />
+
+            <TextView
+                android:id="@+id/cover_text_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/cover_text_7_2" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

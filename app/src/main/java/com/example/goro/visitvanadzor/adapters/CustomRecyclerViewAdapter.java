@@ -1,4 +1,4 @@
-package com.example.goro.visitvanadzor;
+package com.example.goro.visitvanadzor.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.goro.visitvanadzor.activities.MainActivity;
+import com.example.goro.visitvanadzor.interfaces.CustomItemClickListener;
+import com.example.goro.visitvanadzor.classes.Manifacture;
+import com.example.goro.visitvanadzor.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -26,6 +30,8 @@ public class CustomRecyclerViewAdapter extends FeatureRecyclerViewAdapter<Custom
         this.context = context;
         this.listener = listener;
     }
+
+
 
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.goro.visitvanadzor;
+package com.example.goro.visitvanadzor.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,13 +12,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.goro.visitvanadzor.classes.Manifacture;
+import com.example.goro.visitvanadzor.R;
 import com.squareup.picasso.Picasso;
 
 /**
  * Created by Goro on 03.04.2018.
  */
 
-public class DitaileFragmentForManifacturies extends Fragment {
+public class MainFragment extends Fragment {
     private static Context mContext;
     private Manifacture mManifacture;
     private TextView titleTextView;
@@ -29,14 +31,14 @@ public class DitaileFragmentForManifacturies extends Fragment {
     private TextView longitude;
 
 
-    public static DitaileFragmentForManifacturies newInstanceForDitaileFragmentForManifacuries(Context context, Manifacture manifacture) {
+    public static MainFragment newInstance(Context context, Manifacture manifacture) {
         mContext = context;
 
-        DitaileFragmentForManifacturies ditaileFragmentForManifacturies = new DitaileFragmentForManifacturies();
+        MainFragment mainFragment = new MainFragment();
         Bundle bundle = new Bundle();
-        ditaileFragmentForManifacturies.setArguments(bundle);
-        ditaileFragmentForManifacturies.mManifacture = manifacture;
-        return ditaileFragmentForManifacturies;
+        mainFragment.setArguments(bundle);
+        mainFragment.mManifacture = manifacture;
+        return mainFragment;
     }
 
     @Nullable
