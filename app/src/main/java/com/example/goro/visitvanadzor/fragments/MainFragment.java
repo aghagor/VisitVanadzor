@@ -59,6 +59,7 @@ public class MainFragment extends Fragment {
         longitude.setText(String.valueOf(mManifacture.getLongitude()));
 
         titleTextView.setText(mManifacture.getTitle());
+
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

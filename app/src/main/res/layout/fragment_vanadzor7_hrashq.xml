@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.goro.visitvanadzor.fragments.Vanadzor7HrashqFragment">
+    android:background="#ffffff"
+    tools:context="com.example.goro.visitvanadzor.fragments.Vanadzor7WondersFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,8 +23,7 @@
                 <ImageView
                     android:id="@+id/cover_img"
                     android:layout_width="386dp"
-                    android:layout_height="300dp"
-                    android:src="@drawable/sargis_7" />
+                    android:layout_height="300dp" />
             </RelativeLayout>
 
 
@@ -31,13 +31,13 @@
                 android:id="@+id/cover_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/cover_text_7" />
+                android:textSize="16sp"
+                android:textColor="#000"/>
 
             <ImageView
                 android:id="@+id/samvel_img"
                 android:layout_width="386dp"
-                android:layout_height="300dp"
-                android:src="@drawable/samvel_7" />
+                android:layout_height="300dp" />
 
             <TextView
                 android:id="@+id/cover_text_view2"
@@ -45,7 +45,120 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:text="@string/cover_text_7_2" />
+                android:textSize="16sp"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/ekegheci_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#000" />
+
+            <ImageView
+                android:id="@+id/ekegheci_img"
+                android:layout_width="386dp"
+                android:layout_height="300dp" />
+
+            <TextView
+                android:id="@+id/geghagitakan_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#000" />
+
+            <ImageView
+                android:id="@+id/geghagitakan_img"
+                android:layout_width="386dp"
+                android:layout_height="300dp" />
+
+            <TextView
+                android:id="@+id/dproc_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#000" />
+
+            <ImageView
+                android:id="@+id/dproc_img"
+                android:layout_width="386dp"
+                android:layout_height="300dp" />
+
+            <TextView
+                android:id="@+id/palanduzanc_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#000" />
+
+            <ImageView
+                android:id="@+id/palanduzanc_img"
+                android:layout_width="386dp"
+                android:layout_height="300dp" />
+
+            <TextView
+                android:id="@+id/osepi_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#000" />
+
+            <ImageView
+                android:id="@+id/osepi_img"
+                android:layout_width="386dp"
+                android:layout_height="300dp" />
+
+            <TextView
+                android:id="@+id/tayirov_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#000" />
+
+            <ImageView
+                android:id="@+id/tayirov_img"
+                android:layout_width="386dp"
+                android:layout_height="300dp" />
+
+            <TextView
+                android:id="@+id/rusakan_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#000"/>
+
+            <ImageView
+                android:id="@+id/rusakan_img"
+                android:layout_width="386dp"
+                android:layout_height="300dp" />
 
 
         </LinearLayout>

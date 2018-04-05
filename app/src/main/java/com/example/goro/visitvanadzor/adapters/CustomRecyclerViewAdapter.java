@@ -49,7 +49,7 @@ public class CustomRecyclerViewAdapter extends FeatureRecyclerViewAdapter<Custom
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.onItemClick(dataList.get(position));
+                listener.onItemClick(dataList.get(position), position);
             }
         });
     }

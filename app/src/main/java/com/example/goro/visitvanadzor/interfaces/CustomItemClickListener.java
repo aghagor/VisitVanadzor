@@ -7,5 +7,5 @@ import com.example.goro.visitvanadzor.classes.Manifacture;
  */
 
 public interface CustomItemClickListener {
-    public void onItemClick( Object obj);
+    public void onItemClick( Object obj, int position);
 }

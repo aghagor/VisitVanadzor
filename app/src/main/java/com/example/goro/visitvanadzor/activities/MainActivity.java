@@ -15,6 +15,7 @@ import com.example.goro.visitvanadzor.classes.Manifacture;
 import com.example.goro.visitvanadzor.fragments.AboutUsFragment;
 import com.example.goro.visitvanadzor.fragments.MainFragment;
 import com.example.goro.visitvanadzor.fragments.MapFragment;
+import com.example.goro.visitvanadzor.fragments.Vanadzor7WondersFragment;
 import com.example.goro.visitvanadzor.interfaces.CustomItemClickListener;
 
 import java.util.ArrayList;
@@ -52,12 +53,22 @@ public class MainActivity extends AppCompatActivity {
         createDummyDataList();
         adapter = new CustomRecyclerViewAdapter(this, dummyData, new CustomItemClickListener() {
             @Override
-            public void onItemClick(Object obj) {
+            public void onItemClick(Object obj, int position) {
+                switch (position) {
+                    case 0:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.root_layout, Vanadzor7WondersFragment
+                                .newInstance(MainActivity.this, (Manifacture) obj)).addToBackStack(null)
+                                .commit();
+                        navigationBar.setTitle("Վանաձորի 7 հրաշալիքները");
+                        return;
+                    case 1:
+                        Toast.makeText(MainActivity.this, dummyData.get(position).getCoverText(), Toast.LENGTH_SHORT).show();
+                        return;
 
-//                Toast.makeText(MainActivity.this, obj.getTitle(), Toast.LENGTH_SHORT).show();
-                getSupportFragmentManager().beginTransaction().replace(R.id.root_layout, MainFragment
-                        .newInstance(MainActivity.this, (Manifacture) obj)).addToBackStack(null)
-                        .commit();
+
+                }
+//
+
 
             }
         });
@@ -67,7 +78,29 @@ public class MainActivity extends AppCompatActivity {
 
     private void createDummyDataList() {
         Manifacture manifacture1 = new Manifacture("Վանաձորի 7 հրաշալիքները", R.drawable.sb_sargis,
-                78.1, 75.2, "desc");
+                R.drawable.sargis_7, "Օրեր առաջ հանրապետության առաջին քաղաքում էինք…" +
+                "        Դե, մարդկային հյուրընկալությամբ ու պարզությամբ Վանաձորը" +
+                "        միշտ էլ առաջինն է եղել: Այդպես են կարծում ոչ միայն" +
+                "        միամիտ լոռեցիները, այլև նրանք, ովքեր երբևէ եղել են" +
+                "        Վանաձորում: Մեր շրջագայությունն սկսում ենք դրամատուրգ," +
+                "        երգիծաբան, ՀՀ մշակույթի վաստակավոր գործիչ Սամվել" +
+                "        Խալաթյանի հետ հանդիպումով:", R.drawable.samvel_7,
+                "Ասում են՝ իրեն հարգող ամեն լրագրող Վանաձոր" +
+                        "    այցելելիս պետք է անպայման տեսնվի Խալաթյանի հետ՝ ոչ միայն նրա հումորը" +
+                        "    վայելելու, այլև քաղաքի մասին գրված ու չգրված պատմությունները լսելու համար:" +
+                        "    Ո՞ւր այցելել Վանաձորում հարցի պատասխանը երգիծաբանը վաղուց է գտել:" +
+                        "    «Վանաձորի 7 հրաշալիքները». հենց  այսպես է անվանել Սամվել Խալաթյանը" +
+                        "    100 և ավելի տարվա պատմություն ունեցող «հուշ-արձանները», որոնք առաջարկում է" +
+                        "    տեսնել ոչ միայն մեզ, այլև «Ճամփորդի» բոլոր ընթերցողներին:", getResources().getString(R.string.ekegheci_text_7),
+                R.drawable.ekegheci_7,
+                getResources().getString(R.string.geghagitakan_text_7), R.drawable.gloyan_7,
+                getResources().getString(R.string.dproc_text_7), R.drawable.arajin_dproc_7,
+                getResources().getString(R.string.palanduzanc_text_7), R.drawable.palanduzanc_7,
+                getResources().getString(R.string.osepanc_text_7), R.drawable.osepanc_7,
+                getResources().getString(R.string.tayirovner_text_7), R.drawable.sargis_7,
+                getResources().getString(R.string.rusakan_text_7), R.drawable.rusakan_7);
+//        Manifacture manifacture1 = new Manifacture("Վանաձորի 7 հրաշալիքները", R.drawable.sb_sargis,
+//                78.1, 75.2, "desc");
         Manifacture manifacture2 = new Manifacture("Վարպետաց դասեր", R.drawable.mehrab_aghbyur,
                 88.1, 73.2, "desc2");
         Manifacture manifacture3 = new Manifacture("Մշակութային կենտրոններ", R.drawable.patkerasrah,

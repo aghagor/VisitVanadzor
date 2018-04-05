@@ -14,6 +14,7 @@ public class Manifacture {
     private int imageCover;
     private String coverText;
     private int imageSamvelKhalatyan;
+    private String coverText2;
     private String one;
     private int imageOne;
     private String two;
@@ -37,12 +38,15 @@ public class Manifacture {
         this.description = description;
     }
 
-    public Manifacture(int imageCover, String coverText, int imageSamvelKhalatyan, String one,
+    public Manifacture(String title, int img, int imageCover, String coverText, int imageSamvelKhalatyan,String coverText2, String one,
                        int imageOne, String two, int imageTwo, String three, int imageThree, String four, int imageFour,
                        String five, int imageFive, String six, int imageSix, String seven, int imageSeven) {
+        this.title = title;
+        this.img = img;
         this.imageCover = imageCover;
-        this.coverText = coverText;
+        this.coverText = coverText2;
         this.imageSamvelKhalatyan = imageSamvelKhalatyan;
+        this.coverText2 =coverText2;
         this.one = one;
         this.imageOne = imageOne;
         this.two = two;
@@ -73,6 +77,14 @@ public class Manifacture {
 
     public void setCoverText(String coverText) {
         this.coverText = coverText;
+    }
+
+    public String getCoverText2() {
+        return coverText2;
+    }
+
+    public void setCoverText2(String coverText2) {
+        this.coverText2 = coverText2;
     }
 
     public int getImageSamvelKhalatyan() {
