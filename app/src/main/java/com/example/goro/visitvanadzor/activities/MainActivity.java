@@ -7,14 +7,16 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.goro.visitvanadzor.R;
 import com.example.goro.visitvanadzor.adapters.CustomRecyclerViewAdapter;
 import com.example.goro.visitvanadzor.classes.Manifacture;
 import com.example.goro.visitvanadzor.fragments.AboutUsFragment;
-import com.example.goro.visitvanadzor.fragments.ContactFragment;
+import com.example.goro.visitvanadzor.fragments.MainFragment;
 import com.example.goro.visitvanadzor.fragments.MapFragment;
 import com.example.goro.visitvanadzor.fragments.MasterClassesFragment;
+import com.example.goro.visitvanadzor.fragments.MasterClassesSubFragment;
 import com.example.goro.visitvanadzor.fragments.Vanadzor7WondersFragment;
 import com.example.goro.visitvanadzor.interfaces.CustomItemClickListener;
 
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.navigation);
 
         navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        navigationBar.setTitle("Visit Vanadzor");
+        navigationBar.setTitle("General");
 
         featuredRecyclerView = (FeaturedRecyclerView) findViewById(R.id.rv);
 
@@ -59,27 +61,19 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.root_layout, Vanadzor7WondersFragment
                                 .newInstance(MainActivity.this, (Manifacture) obj)).addToBackStack(null)
                                 .commit();
-                        navigationBar.setTitle(getResources().getString(R.string.v7w));
+                        navigationBar.setTitle("Վանաձորի 7 հրաշալիքները");
                         return;
                     case 1:
                         getSupportFragmentManager().beginTransaction().replace(R.id.root_layout, MasterClassesFragment
                                 .newInstance(MainActivity.this)).addToBackStack(null)
                                 .commit();
-                        navigationBar.setTitle(getResources().getString(R.string.vdaser));
-                        return;
-                    case 2:
-                        return;
-                    case 3:
-                        return;
-                    case 4:
-                        return;
-                    case 5:
-                        return;
-                    case 6:
+                        navigationBar.setTitle("Վարպետաց դասեր");
                         return;
 
 
                 }
+//
+
 
             }
         });
@@ -96,8 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 "        Վանաձորում: Մեր շրջագայությունն սկսում ենք դրամատուրգ," +
                 "        երգիծաբան, ՀՀ մշակույթի վաստակավոր գործիչ Սամվել" +
                 "        Խալաթյանի հետ հանդիպումով:", R.drawable.samvel_7,
-                "" +
-                        "Ասում են՝ իրեն հարգող ամեն լրագրող Վանաձոր" +
+                "Ասում են՝ իրեն հարգող ամեն լրագրող Վանաձոր" +
                         "    այցելելիս պետք է անպայման տեսնվի Խալաթյանի հետ՝ ոչ միայն նրա հումորը" +
                         "    վայելելու, այլև քաղաքի մասին գրված ու չգրված պատմությունները լսելու համար:" +
                         "    Ո՞ւր այցելել Վանաձորում հարցի պատասխանը երգիծաբանը վաղուց է գտել:" +
@@ -156,12 +149,6 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new MapFragment();
                     loadFragment(fragment);
                     return true;
-                case R.id.contact_tab:
-                    navigationBar.setTitle("Կապ");
-                    fragment = new ContactFragment();
-                    loadFragment(fragment);
-                    return true;
-
             }
             return false;
         }

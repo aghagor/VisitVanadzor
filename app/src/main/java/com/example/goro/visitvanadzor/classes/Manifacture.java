@@ -1,5 +1,8 @@
 package com.example.goro.visitvanadzor.classes;
 
+import android.widget.Button;
+import android.widget.RatingBar;
+
 /**
  * Created by Goro on 03.04.2018.
  */
@@ -29,6 +32,14 @@ public class Manifacture {
     private int imageSix;
     private String seven;
     private int imageSeven;
+
+    private int coverImg;
+    private String coverString;
+
+    public Manifacture(int coverImg, String coverString) {
+        this.coverImg = coverImg;
+        this.coverString = coverString;
+    }
 
     public Manifacture(String title, int img, double longitude, double langitude, String description) {
         this.title = title;
@@ -62,6 +73,8 @@ public class Manifacture {
         this.seven = seven;
         this.imageSeven = imageSeven;
     }
+
+
 
     public int getImageCover() {
         return imageCover;

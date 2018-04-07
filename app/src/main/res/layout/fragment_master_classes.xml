@@ -75,7 +75,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/andzrevayin" />
 
                     <View
                         android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/arajin_dproc_7" />
 
                     <View
                         android:layout_width="match_parent"
@@ -155,7 +155,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/arcakh" />
 
                     <View
                         android:layout_width="match_parent"
@@ -191,7 +191,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/dzmerayin" />
 
                     <View
                         android:layout_width="match_parent"
@@ -227,7 +227,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/ekegheci_7" />
 
                     <View
                         android:layout_width="match_parent"
@@ -275,7 +275,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/gloyan_7" />
 
                     <View
                         android:layout_width="match_parent"
@@ -311,7 +311,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/hamajnapatker" />
 
                     <View
                         android:layout_width="match_parent"
@@ -347,7 +347,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/ljer_mets" />
 
                     <View
                         android:layout_width="match_parent"
@@ -391,7 +391,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/ljer_navak" />
 
                     <View
                         android:layout_width="match_parent"
@@ -427,7 +427,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/ljer_taghavar" />
 
                     <View
                         android:layout_width="match_parent"
@@ -463,7 +463,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/mehrab_aghbyur" />
 
                     <View
                         android:layout_width="match_parent"
@@ -506,7 +506,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/mtnshagh" />
 
                     <View
                         android:layout_width="match_parent"
@@ -555,7 +555,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/osepanc_7" />
 
                     <View
                         android:layout_width="match_parent"
@@ -627,7 +627,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/palanduzanc_7" />
 
                     <View
                         android:layout_width="match_parent"
@@ -671,7 +671,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/patkerasrah" />
 
                     <View
                         android:layout_width="match_parent"
@@ -707,7 +707,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/rusakan_7" />
 
                     <View
                         android:layout_width="match_parent"
@@ -756,7 +756,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/sargis_7" />
 
                     <View
                         android:layout_width="match_parent"
@@ -792,7 +792,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/verevic" />
 
                     <View
                         android:layout_width="match_parent"
@@ -836,7 +836,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/zoryan" />
 
                     <View
                         android:layout_width="match_parent"
@@ -872,7 +872,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/amenorya" />
+                        android:src="@drawable/ljer_navak" />
 
                     <View
                         android:layout_width="match_parent"

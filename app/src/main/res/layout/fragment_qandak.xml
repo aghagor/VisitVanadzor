@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.goro.visitvanadzor.fragments.subFragments.QandakFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:src="@drawable/arajin_dproc_7"
+                android:id="@+id/class_item_img"
+                android:layout_width="300dp"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:text="մասնակցություն քարի հետ աշխատանքներում,
+            պատրաստի քանդակների ու խաչքարերի դիտում, ցուցասրահում
+            ներկայացված քանդակագորի ձեռքի աշխատանքների դիտում՝
+            կտավներ, մանրանկարչություն փայտի վրա, փոքրիկ քանդակներ
+             և այլն: Հայկական ժողովրդական երգերի կատարում
+             վարպետի հետ: 1-7 հոգանոց խմբերի համար՝ 10.000 դրամ:
+             Ավելացող յուրաքանչյուր անձի համար՝ 1.500 դրամ:
+             Տևողությունը՝ միջինը 1 ժամ:"
+                android:id="@+id/class_item_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:src="@drawable/fb_art"
+                    android:id="@+id/facebook_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+                <ImageView
+                    android:src="@drawable/twitter_logo_bird_transparent_png"
+                    android:id="@+id/twitter_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+                <ImageView
+                    android:src="@drawable/gmail"
+                    android:id="@+id/gmail_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+            </LinearLayout>
+            <RatingBar
+                android:id="@+id/rat_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_gravity="right"
+                android:id="@+id/button_class_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Հաստատել" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>
