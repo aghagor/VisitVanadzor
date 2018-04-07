@@ -13,6 +13,10 @@
         android:id="@+id/map_tab"
         android:icon="@drawable/ic_map_7"
         android:title="@string/title_map" />
+    <item
+        android:id="@+id/contact_tab"
+        android:icon="@drawable/ic_call_black_24dp"
+        android:title="@string/title_contact" />
 
 
 </menu>

@@ -86,4 +86,13 @@
     <string name="panir">Գյուղում ճիլ պանրի պատրաստում</string>
     <string name="lanch">Լանչեր Վանաձորով անցնող խմբերի համար</string>
     <string name="qaylarshav">Քայլարշավ Լոռվա անտառներում</string>
+    <string name="ergu_u_par">Հայկական երգի, պարի ու նվագարանների վարպետաց դասեր</string>
+    <string name="azgayin_erg">ժողովրդական երգերի վարպետաց դաս</string>
+    <string name="azgayin_par">ազգային պարերի վարպետաց դաս</string>
+    <string name="duduk_kitar">դուդուկի, կիթառի վարպետաց դաս</string>
+    <string name="rock">վանաձորյան ռոք խմբի փորձասրահում փորձի մասնակցություն</string>
+    <string name="v7w">Վանաձորի 7 հրաշալիքները</string>
+    <string name="vdaser">Վարպետաց դասեր</string>
+    <string name="title_contact">Կապ</string>
+    <string name="grancvel_ugharkel">Հաստատել և ուղարկել</string>
 </resources>
