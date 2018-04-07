@@ -15,6 +15,7 @@ import com.example.goro.visitvanadzor.classes.Manifacture;
 import com.example.goro.visitvanadzor.fragments.AboutUsFragment;
 import com.example.goro.visitvanadzor.fragments.MainFragment;
 import com.example.goro.visitvanadzor.fragments.MapFragment;
+import com.example.goro.visitvanadzor.fragments.MasterClassesFragment;
 import com.example.goro.visitvanadzor.fragments.Vanadzor7WondersFragment;
 import com.example.goro.visitvanadzor.interfaces.CustomItemClickListener;
 
@@ -62,8 +63,10 @@ public class MainActivity extends AppCompatActivity {
                         navigationBar.setTitle("Վանաձորի 7 հրաշալիքները");
                         return;
                     case 1:
-                        Toast.makeText(MainActivity.this, dummyData.get(position).getCoverText(), Toast.LENGTH_SHORT).show();
-                        return;
+                        getSupportFragmentManager().beginTransaction().replace(R.id.root_layout, MasterClassesFragment
+                                .newInstance(MainActivity.this)).addToBackStack(null)
+                                .commit();
+                        navigationBar.setTitle("12123132");                        return;
 
 
                 }

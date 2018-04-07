@@ -64,4 +64,26 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us" />
+    <string name="arhestanocnerum">Վարպետաց դասեր արվեստանոցներում</string>
+    <string name="paytagorts">փայտագործի մոտ</string>
+    <string name="tiknikagorts">տարազագործ-տիկնիկագործի մոտ</string>
+    <string name="qandakagorts">քանդակագործի մոտ</string>
+    <string name="kavagorts">կավագործի մոտ</string>
+    <string name="karpet">կարպետագործություն, գորգագործություն</string>
+    <string name="nkarich">գեղանկարչի մոտ</string>
+    <string name="snund">Հայկական ավանդական ուտեստների վարպետաց դասեր,  համատեղ պատրաստում, համտես</string>
+    <string name="khorovats">խորովածի  վարպետաց դաս</string>
+    <string name="lavash_tkhel">Թոնրում լավաշի թխում</string>
+    <string name="tolma">համատեղ պատրաստում</string>
+    <string name="muraba">Գաթայի, հալվայի, հատապտուղների մուրաբայի պատրաստում</string>
+    <string name="gata">Արիշտայի, թաթարբորակու, խինկալու, խաչապուրու համատեղ պատրաստում</string>
+    <string name="avandakan">Ավանդական ուտեստներ</string>
+    <string name="khotabuyser">Լոռվա խոտաբույսերով ուտեստներ</string>
+    <string name="hyurynkalutyun">Զբոսաշրջիկների հյուրընկալում ու հյուրասիրություն Լոռվա կոլորիտային ընտանիքներում</string>
+    <string name="dzknorsutyun">ձկնորսության վարպետաց դասեր, համատեղ ձկնորսություն, ձիավարում:</string>
+    <string name="kolorit">Գյուղում մեղվապահության ու մեղրաքամի արարողություն, տարբեր մրգերից ու հատապտուղներից օղու ու գինու թորում</string>
+    <string name="panir">Գյուղում ճիլ պանրի պատրաստում</string>
+    <string name="lanch">Լանչեր Վանաձորով անցնող խմբերի համար</string>
+    <string name="qaylarshav">Քայլարշավ Լոռվա անտառներում</string>
 </resources>
